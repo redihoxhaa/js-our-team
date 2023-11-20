@@ -65,9 +65,17 @@ for (let i = 0; i < arrayTeam.length; i++) {
 
 MILESTONE 2
 
-- Dichiariamo fuori dal nel ciclo un fragment. Successivamente con .createElement, andiamo a creare dei div, ai quali appendiamo quello che la console log avrebbe stampato. Una volta ottenuti tutti i div, appendiamo il fragment al nostro contenitore.
+- Dichiariamo fuori dal ciclo un fragment. Successivamente con .createElement, andiamo a creare dei div, ai quali appendiamo quello che la console log avrebbe stampato. Una volta ottenuti tutti i div, appendiamo il fragment al nostro contenitore.
 
 ---
+
+BONUS 1
+
+- Inseriamo dentro il ciclo di generazione degli elementi una condizione secondo la quale, se la key è foto, non andrà ad appenderla allo span con classe ".foto", ma andrà a generare un element img, sul quale andremo ad usare il metodo .src, per includergli la source dell'immagine. In questo caso sarà `elemento.src("img\${array[i][key]}")`.
+
+BONUS 2
+
+- Andiamo a stilizzare tutto con CSS.
 
 
 
