@@ -1,0 +1,72 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #F5F5F1;
+    color: #67615A;
+}
+
+/* #region TYPOGRAPHY */
+
+/* #endregion TYPOGRAPHY */
+
+/* #region COMMON */
+
+/* #endregion COMMON */
+
+/* #region MAIN */
+
+.container {
+    padding: 50px;
+}
+
+.container h5 {
+    color: black;
+}
+
+.container .description {
+    padding: 40px 0 50px 0;
+    width: 50%;
+}
+
+ul.board {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+ul.board li {
+    margin-bottom: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc((100% - 60px) / 3);
+
+
+}
+
+ul.board li .nome {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+ul.board li .posizione {
+    margin-bottom: 20px;
+}
+
+ul.board li .foto {
+    order: -1;
+    width: 100%;
+}
+
+/* #endregion MAIN */
+
+/* #region MEDIA QUERIES */
+
+/* #endregion MEDIA QUERIES */

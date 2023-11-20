@@ -14,28 +14,22 @@ function printTeam(array) {
 function printTeamDOM(array) {
     const fragment = document.createDocumentFragment();
     for (let i = 0; i < array.length; i++) {
-        const divElement = document.createElement("div");
+        const divElement = document.createElement("li");
         divElement.classList.add("team-member");
-        const divInfo = document.createElement("div");
-        divInfo.classList.add("team-info");
-        const divName = document.createElement("div");
-        divName.classList.add("member-name");
-        divName.append(`Membro ${i + 1}`);
-        divElement.append(divName);
         for (let key in array[i]) {
             if (key !== "foto") {
-                const spanInfo = document.createElement("span");
-                spanInfo.classList.add(key);
-                spanInfo.append(`${array[i][key]}`);
-                divInfo.append(spanInfo);
+                const divInfo = document.createElement("div");
+                divInfo.classList.add(key);
+                divInfo.append(`${array[i][key]}`);
+                divElement.append(divInfo);
             } else {
                 const fotoDiv = document.createElement("img");
                 fotoDiv.classList.add(key);
                 fotoDiv.src = `img/${array[i][key]}`;
-                divInfo.append(fotoDiv);
+                divElement.append(fotoDiv);
             }
         }
-        divElement.append(divInfo);
+
         fragment.append(divElement);
     }
     divContainer.append(fragment);
@@ -68,7 +62,7 @@ const arrayTeam = [{
     posizione: "Graphic Designer",
     foto: "barbara-ramos-graphic-designer.jpg"
 }]
-const divContainer = document.querySelector(".container");
+const divContainer = document.querySelector(".board");
 
 
 console.log(printTeam(arrayTeam));
