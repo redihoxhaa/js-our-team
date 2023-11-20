@@ -19,14 +19,21 @@ function printTeamDOM(array) {
         const divInfo = document.createElement("div");
         divInfo.classList.add("team-info");
         const divName = document.createElement("div");
-        divName.classList.add("member-name")
+        divName.classList.add("member-name");
         divName.append(`Membro ${i + 1}`);
         divElement.append(divName);
         for (let key in array[i]) {
-            const spanInfo = document.createElement("span");
-            spanInfo.classList.add(key)
-            spanInfo.append(`${array[i][key]}`)
-            divInfo.append(spanInfo);
+            if (key !== "foto") {
+                const spanInfo = document.createElement("span");
+                spanInfo.classList.add(key);
+                spanInfo.append(`${array[i][key]}`);
+                divInfo.append(spanInfo);
+            } else {
+                const fotoDiv = document.createElement("img");
+                fotoDiv.classList.add(key);
+                fotoDiv.src = `img/${array[i][key]}`;
+                divInfo.append(fotoDiv);
+            }
         }
         divElement.append(divInfo);
         fragment.append(divElement);
